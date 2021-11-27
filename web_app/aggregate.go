@@ -39,5 +39,8 @@ func main() {
 	bytes := washPostXML
 	var s SitemapIndex
 	xml.Unmarshal(bytes, &s)
-	fmt.Println(s.Locations)
+	//fmt.Println(s.Locations)
+	for _, Location := range s.Locations {
+		fmt.Printf("\n%s", Location)
+	}
 }
