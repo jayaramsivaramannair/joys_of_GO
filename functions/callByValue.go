@@ -18,7 +18,7 @@ func modifyFails(i int, s string, p person) {
 //Note:
 //string, integer and struct passed as parameter into a function are passed by value.
 //This means that they are copied into the function.
-//Thus any change made to the copies will affect the original values.
+//Thus any change made to the copies will not affect the original values.
 
 
 //Note:
