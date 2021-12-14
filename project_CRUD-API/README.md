@@ -3,3 +3,4 @@
 # Instructions
 
 - Run `go get "github.com/gorilla/mux"` on the command line
+- Run `go mod init <module_name>` on the command line
