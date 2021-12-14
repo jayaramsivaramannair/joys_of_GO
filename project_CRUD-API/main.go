@@ -32,6 +32,21 @@ func getMovies(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(movies)
 }
 
+func deleteMovie(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	//Helps with accessing parameters in the query string
+	params := mux.Vars(r)
+	for index, item := range movies {
+		if item.ID == params["id"] {
+			//Three dot is used to unpack each movie from the second slice and push it into the first slice
+			movies = append(movies[:index], movies[index+1:]...)
+			break //if the specific movie is found then break out of the loop
+		}
+	}
+
+}
+
 func main() {
 	//Helps create a new router which available on the mux package
 	r := mux.NewRouter()
