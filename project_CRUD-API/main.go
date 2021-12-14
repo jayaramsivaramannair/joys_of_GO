@@ -27,7 +27,9 @@ var movies []Movie
 //http.ResponseWriter is used to send the response back to the client
 //http.Request is used to process the incoming request from the client
 func getMovies(w http.ResponseWriter, r *http.Request) {
-
+	w.Header().Set("Content-Type", "application/json")
+	//Below code encodes the response as json
+	json.NewEncoder(w).Encode(movies)
 }
 
 func main() {
