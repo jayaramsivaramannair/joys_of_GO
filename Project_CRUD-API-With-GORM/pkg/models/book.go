@@ -9,6 +9,7 @@ var db *gorm.DB
 
 
 type Book struct {
+	ID int `json:"id" gorm:"primaryKey"`
 	Name string `gorm:"" json:"name"`
 	Author string `json:"author"`
 	Publication string `json:"publication"`
