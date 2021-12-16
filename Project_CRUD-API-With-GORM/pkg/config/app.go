@@ -12,7 +12,7 @@ var (
 
 
 func Connect() {
-	dsn := "host=localhost user=jayaramnair password=gorm dbname=simplerest port=9920 sslmode=disable TimeZone=Asia/Shanghai"
+	dsn := "host=localhost user=jayaramnair password=jayaramnair dbname=jayaramnair port=5432 sslmode=disable TimeZone=Asia/Shanghai"
 	d, err:= gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic (err)
