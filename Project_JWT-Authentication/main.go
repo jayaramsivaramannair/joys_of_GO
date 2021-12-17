@@ -33,5 +33,5 @@ func main() {
 	})
 
 
-	router.RUN(":" + port)
+	router.Run(":" + port)
 }
