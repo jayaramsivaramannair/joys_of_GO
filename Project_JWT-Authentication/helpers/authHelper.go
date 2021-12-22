@@ -7,7 +7,7 @@ import (
 
 
 
-func CheckUserType(c *gin.Context role string) (err error) {
+func CheckUserType(c *gin.Context, role string) (err error) {
 	userType := c.GetString("user_type")
 	err = nil
 	if userType != role {

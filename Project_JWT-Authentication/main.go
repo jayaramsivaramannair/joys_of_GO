@@ -4,20 +4,28 @@ package main
 import (
 	routes "github.com/jayaramsivaramannair/joys_of_GO/Project_JWT-Authentication/routes"
 	"os"
+	"log"
+	"github.com/joho/godotenv"
 	"github.com/gin-gonic/gin"
 	
 )
 
 
 func main() {
-	port = os.Getenv("PORT")
+	err := godotenv.Load(".env")
+
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
+	port := os.Getenv("PORT")
 
 	if port =="" {
 		port = "8000"
 	}
 
 	router := gin.New()
-	router.use(gin.Logger())
+	router.Use(gin.Logger())
 
 	routes.AuthRoutes(router)
 	routes.UserRoutes(router)
