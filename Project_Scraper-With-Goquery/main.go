@@ -16,7 +16,7 @@ func main() {
 		log.Println(err)
 	}
 
-	fmt.Prinln("Blog Titles:")
+	fmt.Println("Blog Titles:")
 	fmt.Printf(blogTitles)
 
 }
@@ -28,7 +28,7 @@ func GetLatestBlogTitles(url string)(string , error) {
 		return "", err
 	}
 
-	doc, err := goquery.NewDocumentFromReader(resp.body)
+	doc, err := goquery.NewDocumentFromReader(resp.Body)
 
 	if err != nil {
 		return "", err
