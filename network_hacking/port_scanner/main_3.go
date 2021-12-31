@@ -12,7 +12,7 @@ func main() {
 	for i := 1; i <= 1024; i++ {
 
 		wg.Add(1)
-		
+
 		go func(j int) {
 
 			defer wg.Done()
