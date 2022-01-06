@@ -38,6 +38,8 @@ func incCounter(id int) {
 
 	for count := 0; count < 2; count++ {
 		//Safely Add One To Counter.
+		//AddInt64 function from the atomic package synchronizes the addition of integer values
+		//to ensure that only one goroutine can perform and complete this add operation at a time.
 		atomic.AddInt64(&counter, 1)
 	}
 }
