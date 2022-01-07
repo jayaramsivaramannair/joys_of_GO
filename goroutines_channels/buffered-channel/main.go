@@ -43,6 +43,9 @@ func main() {
 		tasks <- fmt.Sprintf("Task : %d", post)
 	}
 
+	//Note: When a channel is closed, goroutines can still perform receives on the channel 
+	//but can no longer send on the channel
+
 
 	//Close the channel so the goroutines will quit
 	// when all the work is done. 
