@@ -16,3 +16,5 @@
 - [Selection Sort](./data_structure_algorithms/selection_sort)
 - [Hash_Tables](./data_structure_algorithms/hash_tables)
 - [Stack Based Linter](./data_structure_algorithms/stacks/linter.go)
+- [Queue Implementation](./data_structure_algorithms/queues/main.go)
+- [Queue Based Print Manager](./data_structure_algorithms/queues/print_manager.go)
